@@ -16,7 +16,7 @@ public class App {
         iMachine.addProduct(new Bottle(4, "Water", "Water", 170, 1500));
         iMachine.addProduct(new HotDrink(5, "Coffee", "HotDrink", 111, 400, 49));
         iMachine.addProduct(new HotDrink(5, "Tea", "HotDrink", 65, 250, 55));
-        iMachine.addProduct(new HotDrink(5, "Compote", "HotDrink", 135, 350, 37));
+        iMachine.addProduct(new HotDrink(5, "Compote", "HotDrink", 135, 335, 37));
       
         for(Product prod: iMachine.getProducts()){
             System.out.println(prod.toString());
