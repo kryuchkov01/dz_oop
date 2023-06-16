@@ -1,3 +1,4 @@
+import StudentDomen.PersonComparator;
 import StudentDomen.Student;
 import StudentDomen.StudentFlow;
 import StudentDomen.StudentGroup;
@@ -18,7 +19,13 @@ public class App {
         Student s5 = new Student("Dasha", "Cvetkova", 21, 171);
         Student s6 = new Student("Lena", "Ivanova", 21, 104);
         Teacher t1 = new Teacher("Andrey", "Kryuchkov", 29, 10047);
-        
+        Teacher t2 = new Teacher("Andrey", "Ribkin", 25, 10347);
+
+        PersonComparator<Student> compS = new PersonComparator<Student>();
+        compS.compare(s5, s6);
+        PersonComparator<Teacher> compT = new PersonComparator<Teacher>();
+        compT.compare(t1, t2);
+
         List<Student> listStud = new ArrayList<Student>();
         listStud.add(s1);
         listStud.add(s2);
