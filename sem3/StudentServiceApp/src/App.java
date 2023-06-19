@@ -1,3 +1,4 @@
+import StudentDomen.Employee;
 import StudentDomen.PersonComparator;
 import StudentDomen.Student;
 import StudentDomen.StudentFlow;
@@ -7,6 +8,9 @@ import StudentDomen.User;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import Controllers.EmployeeController;
+import Controllers.TeacherController;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -105,18 +109,11 @@ public class App {
 
 
 
-        // System.out.println();
-        // Collections.sort(group1.getStudents());
-
-        // for(Student stud : group1)
-        // {
-        //     System.out.println(stud);
-        // }
+        Employee per1 = new Employee("Борис", "Иванов", 40, "basic");
         
-
-        // System.out.println(u1);
-        // System.out.println(s1);
-        // System.out.println(t1);
-        // System.out.println(group1);
+        // EmployeeController empContr = new EmployeeController();
+        // empContr.paySalary(per1);  как вариант
+        EmployeeController.paySalary(per1);
+        TeacherController.payBonus(t1);
     }
 }

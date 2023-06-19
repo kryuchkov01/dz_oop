@@ -10,6 +10,7 @@ public class Employee extends User{
         this.special = special;
     }
 
+
     public String getSpecial() {
         return special;
     }
