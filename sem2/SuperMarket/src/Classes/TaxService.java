@@ -3,8 +3,9 @@ package Classes;
 
 
 import Intefaces.iActorBehaviour;
+import Intefaces.iReturnOrder;
 
-public class TaxService implements iActorBehaviour{
+public class TaxService implements iActorBehaviour, iReturnOrder{
 
     private String name;
     private boolean isTakeOrder;
@@ -41,6 +42,21 @@ public class TaxService implements iActorBehaviour{
     @Override
     public Actor getActor() {
         return new OrdinaryClient(name);
+    }
+
+    @Override
+    public void rejectOrder() {
+        System.out.println("Оформлен отказ от заказа.");
+    }
+
+    @Override
+    public void returnOrder() {
+        System.out.println("Произведен возврат товара продавцу.");
+    }
+
+    @Override
+    public void returnMoney() {
+        System.out.println("Возвращены деньги на счет покупателя.");
     }
     
 }

@@ -57,7 +57,7 @@ public class Market implements iMarketBehaviour, iQueueBehaviour{
         
     }
 
-    @Override
+    @Override//sss
     public void releaseFromQueue() {
        List<Actor> releaseActors = new ArrayList<>();
        for(iActorBehaviour actor:queue)
@@ -67,6 +67,7 @@ public class Market implements iMarketBehaviour, iQueueBehaviour{
             releaseActors.add(actor.getActor());
             System.out.println(actor.getActor().getName()+" клиент ушел из очереди ");
         }
+        
 
        }
     releaseFromMarket(releaseActors);

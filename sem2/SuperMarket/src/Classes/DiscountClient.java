@@ -1,6 +1,8 @@
 package Classes;
 
-public class DiscountClient extends Actor{
+import Intefaces.iReturnOrder;
+
+public class DiscountClient extends Actor implements iReturnOrder{
     private String discountName;
     private int idDisc;
     static int clientCount;  // тут подумать
@@ -45,6 +47,19 @@ public class DiscountClient extends Actor{
         return super.name;
     }
     
-    
+    @Override
+    public void rejectOrder() {
+        System.out.println("Оформлен отказ от заказа.");
+    }
+
+    @Override
+    public void returnOrder() {
+        System.out.println("Произведен возврат товара продавцу.");
+    }
+
+    @Override
+    public void returnMoney() {
+        System.out.println("Возвращены деньги на счет покупателя.");
+    }
 
 }

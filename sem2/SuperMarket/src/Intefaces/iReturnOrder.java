@@ -1,5 +1,9 @@
 package Intefaces;
 
+import Classes.Actor;
+
 public interface iReturnOrder {
-    //его надо подключить к клиенту, тут еще методы добавить
+    void rejectOrder();
+    void returnOrder();
+    void returnMoney();
 }
